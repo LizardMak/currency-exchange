@@ -2,13 +2,13 @@ window.addEventListener("load", function () {
   this.window.document.getElementById("form").addEventListener("submit", handleSubmit)
 })
 
-function handleSubmit() {
+async function handleSubmit() {
   event.preventDefault();
   let USDAmount = document.getElementById("amountUSD").value;
   let exchangeTo = document.querySelector('input[name="currency"]:checked').id;
-  let exchangeRate = getExchangeRate(exchangeTo);
+  let exchangeRateObject = await getExchangeRate(exchangeTo);
   alert(USDAmount);
-  alert(exchangeRate);
+  console.log(exchangeRateObject);
 }
 
 function getExchangeRate(exchangeTo) {
