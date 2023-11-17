@@ -9,12 +9,6 @@
     "lint": "eslint src --ext .js",
     "test": "jest --coverage"
   },
-  "eslintConfig": {
-    "env": {
-      "browser": true,
-      "node": true
-    }
-  },
   "keywords": [],
   "author": "",
   "license": "ISC",
@@ -23,6 +17,7 @@
     "@babel/plugin-transform-modules-commonjs": "^7.22.5",
     "clean-webpack-plugin": "^4.0.0",
     "css-loader": "^6.8.1",
+    "dotenv-webpack": "^8.0.1",
     "eslint": "^8.42.0",
     "eslint-webpack-plugin": "^4.0.1",
     "html-webpack-plugin": "^5.5.3",
