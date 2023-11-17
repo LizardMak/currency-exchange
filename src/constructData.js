@@ -4,6 +4,7 @@ export function DataConstructer(USD, currency, exchangeRate) {
  this.exchangeRate = exchangeRate; 
  this.exchangeCurrency = function() {
   let newAmount = this.USD * this.exchangeRate;
+  let fixedNewAmount = newAmount.toFixed(2);
   let currencySymbol = "";
   if (this.currency === "EUR") {
     currencySymbol = "€"
@@ -12,19 +13,6 @@ export function DataConstructer(USD, currency, exchangeRate) {
   } else if (this.currency === "JPY" || this.currency === "CNY") {
     currencySymbol = "¥"
   }
-  return currencySymbol + newAmount
+  return currencySymbol + fixedNewAmount
  }
 }
-
-//DataConstructor.prototype.exchangeCurrency = function () {
-//  let newAmount = this.USD * this.exchangeRate;
-//  let currencySymbol = "";
-//  if (this.currency === "EUR") {
-//    currencySymbol = "€"
-//  } else if (this.currency === "MXN" || this.currency === "CAD") {
-//    currencySymbol = "$"
-//  } else if (this.currency === "JPY" || this.currency === "CNY") {
-//    currencySymbol = "¥"
-//  }
-//  return currencySymbol + newAmount
-//}
