@@ -15,13 +15,14 @@ function getExchangeRate(exchangeTo) {
   return fetch(`https://v6.exchangerate-api.com/v6/${process.env.API_KEY}/pair/USD/${exchangeTo}`)
   .then(function(response) {
     if (!response.ok) {
-      const errorMessage = `${response.status} ${response.statusText}`;
+      const errorMessage = `${response.status}, search for 'error ${response.status} API' online for more details`;
       throw new Error(errorMessage);
     } else {
       return response.json();
     }
   })
   .catch(function(error) {
+    document.getElementById("errorMessage").innerHTML = error;
     return error;
   });
 }
