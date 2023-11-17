@@ -4,5 +4,7 @@ window.addEventListener("load", function () {
 
 function handleSubmit() {
   event.preventDefault();
+  let USDAmount = document.getElementById("amountUSD").value;
+  let exchangeTo = document.querySelector('input[name="currency"]:checked').id;
   
 }
