@@ -12,7 +12,7 @@ function handleSubmit() {
 }
 
 function getExchangeRate(exchangeTo) {
-  return fetch(`https://v6.exchangerate-api.com/v6/${process.env.NODE_ENV.API_KEY}/pair/USD/${exchangeTo}`)
+  return fetch(`https://v6.exchangerate-api.com/v6/${process.env.API_KEY}/pair/USD/${exchangeTo}`)
   .then(function(response) {
     if (!response.ok) {
       const errorMessage = `${response.status} ${response.statusText}`;
