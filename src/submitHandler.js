@@ -1,4 +1,5 @@
 import ExchangeRates from "./getExchangeRate";
+import { DataConstructer } from "./constructData";
 
 window.addEventListener("load", function () {
   this.window.document.getElementById("form").addEventListener("submit", handleSubmit)
@@ -10,6 +11,7 @@ async function handleSubmit() {
   let exchangeTo = document.querySelector('input[name="currency"]:checked').id;
   let exchangeRateObject = await ExchangeRates.getExchangeRate(exchangeTo);
   let exchangeRate = exchangeRateObject.conversion_rate;
-  alert(USDAmount);
-  console.log(exchangeRate);
+  let dataConstuct = new DataConstructer(USDAmount, exchangeTo, exchangeRate);
+  let result = dataConstuct.exchangeCurrency();
+  document.getElementById("result").innerHTML = result;
 }
