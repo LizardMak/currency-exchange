@@ -7,8 +7,9 @@ async function handleSubmit() {
   let USDAmount = document.getElementById("amountUSD").value;
   let exchangeTo = document.querySelector('input[name="currency"]:checked').id;
   let exchangeRateObject = await getExchangeRate(exchangeTo);
+  let exchangeRate = exchangeRateObject.conversion_rate;
   alert(USDAmount);
-  console.log(exchangeRateObject);
+  console.log(exchangeRate);
 }
 
 function getExchangeRate(exchangeTo) {
