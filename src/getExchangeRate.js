@@ -5,8 +5,8 @@ export default class ExchangeRates {
       const responseJson = await response.json();
       if (!response.ok) {
         if (response.status === 404) {
-          const errorMessage = "Error: Currency does not exist!"
-          throw new Error(errorMessage)
+          const errorMessage = "Error: Currency does not exist!";
+          throw new Error(errorMessage);
         } else {
           const errorMessage = `${response.status}, search for 'error ${response.status} API' online for more details`;
           throw new Error(errorMessage);
