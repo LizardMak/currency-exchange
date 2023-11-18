@@ -10,11 +10,11 @@ export default class ExchangeRates {
         return responseJson;
       }
     }
-    catch(error) {
-     document.getElementById("result").setAttribute("class", "hidden");
-     document.getElementById("errorMessage").removeAttribute("class");
-     document.getElementById("errorMessage").innerHTML = error;
-     return error;
-   }
+    catch (error) {
+      document.getElementById("result").setAttribute("class", "hidden");
+      document.getElementById("errorMessage").removeAttribute("class");
+      document.getElementById("errorMessage").innerHTML = error;
+      return error;
+    }
   }
 }
