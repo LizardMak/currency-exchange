@@ -4,3 +4,4 @@ import './css/styles.css';
 import './submitHandler';
 import './getExchangeRate';
 import './constructData';
+import './printError';

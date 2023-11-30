@@ -1,3 +1,5 @@
+import printError from "./printError";
+
 export default class ExchangeRates {
   static async getExchangeRate(currency) {
     try {
@@ -16,9 +18,7 @@ export default class ExchangeRates {
       }
     }
     catch (error) {
-      document.getElementById("result").setAttribute("class", "hidden");
-      document.getElementById("errorMessage").removeAttribute("class");
-      document.getElementById("errorMessage").innerHTML = error;
+      printError(error);
       return error;
     }
   }

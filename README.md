@@ -20,9 +20,20 @@ _{This program is a webpage that will calculate the exchange rate of a specified
 
 ## Setup/Installation Requirements
 
-* _Ensure that VSCode is installed_
+* _Ensure that VSCode and GitBash are installed_
 * _Start blank project in VSCode_
 * _Clone GitHub repo to VSCode using terminal_
+* _Open GitBash_
+* _Navigate to project folder using 'CD' command_
+* _Type 'touch .env' into GitBash and hit enter_
+* _Visit the Exchange Rate API site at https://www.exchangerate-api.com/docs/overview_
+* _Click get free key in top right corner_
+* _Create an account for Exchange Rate API_
+* _Navigate to API Keys and click 'Add New API Key'_
+* _A series of numbers and letters should appear under 'Active', this is the API Key_
+* _Copy the API Key and go back to your .env file_
+* _In the .env file type 'API_KEY='_
+* _Paste the API Key in the .env file after the = sign_
 * _Open VSCode terminal in project_
 * _Type 'npm install' in Terminal and hit enter_
 * _Type 'npm run start' in Terminal and hit enter_
